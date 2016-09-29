@@ -1,0 +1,40 @@
+{
+  "name": "biquad-coeffs-webaudio-v2",
+  "description": "WebAudio formulae for audio EQ biquad filter coefficients",
+  "version": "0.0.0",
+  "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/biquad-coeffs/issues"
+  },
+  "dependencies": {
+    "biquad-coeffs-webaudio-v1": "^0.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "mocha": "^3.0.2",
+    "run-with-mocha": "^1.0.0"
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "lib"
+  ],
+  "homepage": "https://github.com/mohayonao/biquad-coeffs/",
+  "keywords": [
+    "biquad",
+    "coeffs",
+    "webaudio",
+    "dsp",
+    "filter"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/biquad-coeffs.git"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "mocha"
+  }
+}
