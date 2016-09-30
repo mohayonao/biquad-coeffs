@@ -24178,7 +24178,7 @@ var initState = {
   isPlaying: false,
   doneFetchAudio: false,
   previewLib: _Filters.libs[0][0],
-  filterParams: { type: "lowpass", freq: 350, q: 1, gain: 0 },
+  filterParams: { type: "lowpass", freq: 350, q: 1, gain: 1 },
   filterData: {}
 };
 
