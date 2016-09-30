@@ -1,5 +1,5 @@
 import "whatwg-fetch";
-import BiquadFilterKernel from "./BiquadFilterKernel";
+import BiquadFilterKernel from "biquad-filter-kernel";
 
 export default class PreviewPlayer {
   constructor(audioContext, actions) {

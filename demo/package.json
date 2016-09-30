@@ -3,6 +3,7 @@
   "description": "biquad-coeffs-demo",
   "version": "1.0.0",
   "dependencies": {
+    "biquad-filter-kernel": "^1.0.0",
     "classnames": "^2.2.5",
     "lodash.frompairs": "^4.0.1",
     "react": "^15.3.1",
