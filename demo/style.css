@@ -1,0 +1,59 @@
+.header {
+  font-family: "Work Sans", sans-serif;
+}
+
+.header h1 {
+  font-size: 48px;
+}
+
+.header * {
+  font-weight: 200;
+}
+
+.btn {
+  width: 100%; outline: none !important;
+}
+
+.svg-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.svg-container svg {
+  width: 640px;
+  height: 320px;
+  background: #ecf0f1;
+}
+
+.legend-item {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.legend-rect {
+  margin-right: 4px;
+}
+
+.coeffs {
+  padding: 2px 8px;
+}
+
+.coeffs-label {
+  display: inline-block;
+  font-weight: normal;
+  width: 100px;
+}
+
+.coeffs-item span {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+
+.selected {
+  background: #ecf0f1;
+}
+
+#app {
+  margin-top: 15px;
+}
