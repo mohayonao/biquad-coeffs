@@ -8,7 +8,7 @@ module.exports = function(freq, q, gain) {
   var w0 = 2 * Math.PI * freq;
   var sin = Math.sin(w0);
   var cos = Math.cos(w0);
-  var a = Math.pow(10, (gain / 20));
+  var a = 0 < gain ? Math.sqrt(gain) : 1 / Math.sqrt(-gain);
   var alpha = sin / (2 * q);
 
   var b0 =  1 + alpha * a;

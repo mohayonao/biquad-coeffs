@@ -14,7 +14,7 @@ describe("maxmsp/lowshelf", () => {
 
   it("f:1000, q:4, gain:2", () => {
     const actual = fnc(1000/44100, 4, 2);
-    const expected = [ 1.012925, -1.897644, 0.909205, -1.902162, 0.917612 ];
+    const expected = [ 1.018711, -1.905607, 0.914541, -1.912518, 0.926341 ];
 
     assert.deepEqual(fixed6(actual), expected);
   });
