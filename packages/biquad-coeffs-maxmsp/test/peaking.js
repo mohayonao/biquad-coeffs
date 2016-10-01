@@ -14,7 +14,7 @@ describe("maxmsp/peaking", () => {
 
   it("f:1000, q:4, gain:2", () => {
     const actual = fnc(1000/44100, 4, 2);
-    const expected = [ 1.008132, -1.952211, 0.964063, -1.952211, 0.972194 ];
+    const expected = [ 1.012395, -1.955196, 0.962815, -1.955196, 0.97521 ];
 
     assert.deepEqual(fixed6(actual), expected);
   });
