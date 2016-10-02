@@ -3,6 +3,7 @@
 module.exports = function(freq, q, gain) {
   freq = Math.max(1e-6, Math.min(freq, 1));
   q    = Math.max(1e-4, Math.min(q, 1000));
+  gain = Math.max(-40, Math.min(gain, 40));
 
   var w0 = 2 * Math.PI * freq;
   var sin = Math.sin(w0);

@@ -2,6 +2,7 @@
 
 module.exports = function(freq, q, gain) {
   freq = Math.max(1e-6, Math.min(freq, 1));
+  q    = Math.max(1e-4, Math.min(q, 1000));
   gain = Math.max(-40, Math.min(gain, 40));
 
   var w0 = 2 * Math.PI * freq;
@@ -9,7 +10,7 @@ module.exports = function(freq, q, gain) {
   var cos = Math.cos(w0);
   var a = Math.pow(10, (gain / 40));
   var alpha = sin / 2 * Math.sqrt((a + 1 / a) * (1 / q - 1) + 2);
-  var alphamod = 2 * Math.sqrt(a) * alpha;
+  var alphamod = (2 * Math.sqrt(a) * alpha) || 0;
 
   var b0 =      a * ((a+1) + (a-1) * cos + alphamod);
   var b1 = -2 * a * ((a-1) + (a+1) * cos           );
