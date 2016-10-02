@@ -24387,6 +24387,7 @@ module.exports = function (freq, q) {
 
 module.exports = function (freq, q, gain) {
   freq = Math.max(1e-6, Math.min(freq, 1));
+  q = Math.max(1e-4, Math.min(q, 1000));
   gain = Math.max(-40, Math.min(gain, 40));
 
   var w0 = 2 * Math.PI * freq;
@@ -24394,7 +24395,7 @@ module.exports = function (freq, q, gain) {
   var cos = Math.cos(w0);
   var a = Math.pow(10, gain / 40);
   var alpha = sin / 2 * Math.sqrt((a + 1 / a) * (1 / q - 1) + 2);
-  var alphamod = 2 * Math.sqrt(a) * alpha;
+  var alphamod = 2 * Math.sqrt(a) * alpha || 0;
 
   var b0 = a * (a + 1 + (a - 1) * cos + alphamod);
   var b1 = -2 * a * (a - 1 + (a + 1) * cos);
@@ -24443,6 +24444,7 @@ module.exports = function (freq, q) {
 
 module.exports = function (freq, q, gain) {
   freq = Math.max(1e-6, Math.min(freq, 1));
+  q = Math.max(1e-4, Math.min(q, 1000));
   gain = Math.max(-40, Math.min(gain, 40));
 
   var w0 = 2 * Math.PI * freq;
@@ -24450,7 +24452,7 @@ module.exports = function (freq, q, gain) {
   var cos = Math.cos(w0);
   var a = Math.pow(10, gain / 40);
   var alpha = sin / 2 * Math.sqrt((a + 1 / a) * (1 / q - 1) + 2);
-  var alphamod = 2 * Math.sqrt(a) * alpha;
+  var alphamod = 2 * Math.sqrt(a) * alpha || 0;
 
   var b0 = a * (a + 1 - (a - 1) * cos + alphamod);
   var b1 = 2 * a * (a - 1 - (a + 1) * cos);
@@ -24490,6 +24492,7 @@ module.exports = function (freq, q) {
 module.exports = function (freq, q, gain) {
   freq = Math.max(1e-6, Math.min(freq, 1));
   q = Math.max(1e-4, Math.min(q, 1000));
+  gain = Math.max(-40, Math.min(gain, 40));
 
   var w0 = 2 * Math.PI * freq;
   var sin = Math.sin(w0);
@@ -24587,9 +24590,9 @@ module.exports = function (freq, q, gain) {
   var w0 = 2 * Math.PI * freq;
   var sin = Math.sin(w0);
   var cos = Math.cos(w0);
-  var a = 0 < gain ? Math.sqrt(gain) : 1 / Math.sqrt(-gain);
+  var a = 0 <= gain ? Math.sqrt(gain) : 1 / Math.sqrt(-gain);
   var alpha = sin / 2 * Math.sqrt((a + 1 / a) * (1 / q - 1) + 2);
-  var alphamod = 2 * Math.sqrt(a) * alpha;
+  var alphamod = 2 * Math.sqrt(a) * alpha || 0;
 
   var b0 = a * (a + 1 + (a - 1) * cos + alphamod);
   var b1 = -2 * a * (a - 1 + (a + 1) * cos);
@@ -24646,9 +24649,9 @@ module.exports = function (freq, q, gain) {
   var w0 = 2 * Math.PI * freq;
   var sin = Math.sin(w0);
   var cos = Math.cos(w0);
-  var a = 0 < gain ? Math.sqrt(gain) : 1 / Math.sqrt(-gain);
+  var a = 0 <= gain ? Math.sqrt(gain) : 1 / Math.sqrt(-gain);
   var alpha = sin / 2 * Math.sqrt((a + 1 / a) * (1 / q - 1) + 2);
-  var alphamod = 2 * Math.sqrt(a) * alpha;
+  var alphamod = 2 * Math.sqrt(a) * alpha || 0;
 
   var b0 = a * (a + 1 - (a - 1) * cos + alphamod);
   var b1 = 2 * a * (a - 1 - (a + 1) * cos);
