@@ -1,13 +1,13 @@
 {
   "name": "biquad-coeffs-webaudio",
   "description": "WebAudio formulae for audio EQ biquad filter coefficients",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "Nao Yonamine <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/biquad-coeffs/issues"
   },
   "dependencies": {
-    "biquad-coeffs-webaudio-v2": "^1.0.0"
+    "biquad-coeffs-webaudio-v2": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^3.5.0",
